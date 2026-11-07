@@ -1,0 +1,10 @@
+defaults:
+  - default
+
+run:
+  dir: ${paths.output_dir}
+
+job_logging:
+  handlers:
+    file:
+      filename: ${hydra.runtime.output_dir}/eval.log

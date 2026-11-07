@@ -1,0 +1,28 @@
+model_args:
+  pretrained_model_name_or_path: "meta-llama/Llama-3.1-8B"
+  attn_implementation: 'flash_attention_2'
+  torch_dtype: bfloat16
+tokenizer_args:
+  pretrained_model_name_or_path: "meta-llama/Llama-3.1-8B"
+lora_config:
+  r: 32
+  alpha: 64
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+  dropout: 0
+adapter_path: null
+template_args:
+  apply_chat_template: True
+  system_prompt: You are a helpful assistant.
+  system_prompt_with_special_tokens: "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nYou are a helpful assistant.<|eot_id|>"
+  user_start_tag: "<|start_header_id|>user<|end_header_id|>\n\n"
+  user_end_tag: "<|eot_id|>"
+  asst_start_tag: "<|start_header_id|>assistant<|end_header_id|>\n\n"
+  asst_end_tag: "<|eot_id|>"
+  date_string: 10 Apr 2025

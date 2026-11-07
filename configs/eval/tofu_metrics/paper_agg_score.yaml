@@ -1,0 +1,15 @@
+# @package eval.tofu.metrics.paper_agg_score
+defaults:
+  - .@pre_compute.paper_mem_score: paper_mem_score
+  - .@pre_compute.paper_priv_score: paper_priv_score
+  - .@pre_compute.paper_utility_score: paper_utility_score
+
+pre_compute:
+  paper_mem_score:
+    access_key: mem
+  paper_priv_score:
+    access_key: priv
+  paper_utility_score:
+    access_key: util
+
+handler: paper_agg_score

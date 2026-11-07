@@ -1,0 +1,26 @@
+# @package eval.tofu
+
+defaults:
+  - tofu_metrics:
+    - exact_memorization
+    - mia_min_k_plus_plus
+    - mia_min_k
+    - mia_loss
+    - mia_zlib
+    - mia_gradnorm
+    - mia_reference
+    - forget_Q_A_gibberish
+    - paper_mem_score
+    - paper_priv_score
+    - paper_utility_score
+    - paper_agg_score
+
+handler: TOFUEvaluator
+output_dir: ${paths.output_dir}
+metrics: {}
+overwrite: false
+forget_split: forget10
+holdout_split: holdout10
+retain_logs_path: null
+question_key: "question"
+batch_size: 32

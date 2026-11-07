@@ -1,0 +1,22 @@
+defaults:
+  - RMU
+  - _self_
+
+handler: SPRMU_soap_klshampoo
+
+method_args:
+  soap_betas: [0.95, 0.95]
+  soap_eps: 1.0e-08
+  precondition_frequency: 10
+  max_precond_dim: 3072
+  precondition_1d: false
+  init_factor: 0.1
+  damping: false
+  clamping: true
+  max_clamp_value: 4000
+  cast_dtype: bfloat16
+
+args:
+  seed: 0
+  weight_decay: 0.01
+  learning_rate: 2e-5

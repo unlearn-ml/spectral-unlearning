@@ -1,0 +1,13 @@
+defaults:
+  - GradDiff
+  - _self_
+
+handler: sograddiff
+method_args:
+  rho: 0.04
+  sophia_betas: [0.9, 0.95]
+  sophia_eps: 1.0e-5
+
+args:
+  weight_decay: 0.00
+  learning_rate: 5e-6

@@ -1,0 +1,21 @@
+defaults:
+  - RMU
+  - _self_
+
+handler: SPRMU
+method_args:
+  soap_betas: [0.95, 0.95]
+  soap_eps: 1.0e-08
+  precondition_frequency: 10
+  shampoo_beta: -1.0
+  max_precond_dim: 3072
+  merge_dims: false
+  precondition_1d: false
+  normalize_grads: false
+  data_format: channels_first
+  correct_bias: true
+  cast_dtype: bfloat16
+
+args:
+  weight_decay: 0.01
+  learning_rate: 2e-5

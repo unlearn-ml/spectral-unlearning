@@ -1,0 +1,14 @@
+# @package eval.lm_eval
+
+handler: LMEvalEvaluator
+output_dir: ${paths.output_dir}
+overwrite: false
+
+tasks:
+  - mmlu
+
+
+simple_evaluate_args:
+  batch_size: "auto:128"
+  system_instruction: null
+  apply_chat_template: false

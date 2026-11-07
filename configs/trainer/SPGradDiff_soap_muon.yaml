@@ -1,0 +1,20 @@
+defaults:
+  - GradDiff
+  - _self_
+
+handler: SPGradDiff_soap_muon
+
+method_args:
+  soap_betas: [0.95, 0.95]
+  soap_eps: 1.0e-08
+  max_precond_dim: 3072
+  muon_momentum: 0.95
+  muon_ns_steps: 5
+  normalize_grads: false
+  correct_bias: true
+  cast_dtype: bfloat16
+
+args:
+  seed: 0
+  weight_decay: 0.00
+  learning_rate: 2e-5

@@ -1,0 +1,15 @@
+root_dir: .
+
+tofu_splits:
+  forget01: {retain: retain99, holdout: holdout01}
+  forget05: {retain: retain95, holdout: holdout05}
+  forget10: {retain: retain90, holdout: holdout10}
+
+data_dir: ${paths.root_dir}/data/
+
+datasets: ${paths.root_dir}/configs/data/datasets
+
+
+output_dir: ${paths.root_dir}/saves/${mode}/${task_name}
+
+work_dir: ${hydra:runtime.cwd}

@@ -1,0 +1,9 @@
+# @package eval.tofu.metrics.paper_mem_score
+defaults:
+  - .@pre_compute.extraction_strength: extraction_strength
+  - .@pre_compute.exact_memorization: exact_memorization
+  - .@pre_compute.forget_Q_A_Prob: forget_Q_A_Prob
+  - .@pre_compute.forget_Q_A_PARA_Prob: forget_Q_A_PARA_Prob
+  - .@pre_compute.forget_Q_A_PERT_Prob: forget_Q_A_PERT_Prob
+
+handler: paper_mem_score

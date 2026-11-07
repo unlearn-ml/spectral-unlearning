@@ -1,0 +1,25 @@
+model_args:
+  pretrained_model_name_or_path: "meta-llama/Llama-2-7b-hf"
+  attn_implementation: 'flash_attention_2'
+  torch_dtype: bfloat16
+tokenizer_args:
+  pretrained_model_name_or_path: "meta-llama/Llama-2-7b-hf"
+lora_config:
+  r: 32
+  alpha: 64
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+  dropout: 0
+adapter_path: null
+template_args:
+  apply_chat_template: False
+  user_start_tag: "Question: "
+  user_end_tag: "\n"
+  asst_start_tag: "Answer: "
+  asst_end_tag: "\n\n"
