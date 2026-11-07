@@ -24,3 +24,15 @@ CUDA_VISIBLE_DEVICES=0 SEED=0 bash scripts/run_experiments.sh \
 Use `bash scripts/run_experiments.sh --list` to see available combinations.
 
 Results: `saves/experiments/<run>/results.tsv` and `results.tex`.
+
+## Citation
+
+```bibtex
+@inproceedings{choi2026spectral,
+  title = {Spectral Unlearning: Transformer Structure-Preserving Updates for Language Models},
+  author = {Sung Il Choi and Junhao Cai and Dohun Kim and Changhee Joo},
+  booktitle = {The Fortieth Annual Conference on Neural Information Processing Systems},
+  year = {2026},
+  url = {https://openreview.net/forum?id=R3Qn4N72Rg}
+}
+```
